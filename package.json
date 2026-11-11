@@ -1,0 +1,55 @@
+{
+  "name": "near-guard",
+  "version": "1.0.0",
+  "description": "AI Agent Spending Firewall, Counterparty Risk Service, and Function-Call Key Wallet Wrapper for NEAR Protocol",
+  "type": "module",
+  "main": "src/server/index.ts",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c cyan,green \"tsx watch src/server/index.ts\" \"vite\"",
+    "dev:api": "tsx watch src/server/index.ts",
+    "dev:web": "vite",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx src/server/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo:attack": "tsx src/scripts/demoAttack.ts"
+  },
+  "keywords": [
+    "near",
+    "near-protocol",
+    "ai-agents",
+    "security",
+    "firewall",
+    "access-keys",
+    "function-call-keys"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "lucide-react": "^1.72.0",
+    "near-kit": "^0.20.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "uuid": "^14.0.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^10.0.7",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}
